@@ -1,5 +1,14 @@
-pandas==2.0.3
-numpy==1.24.3
-scikit-learn==1.2.2
-matplotlib==3.7.1
-seaborn==0.12.2
+# NOTE: the previous pins (pandas 2.0.3 / numpy 1.24.3 / scikit-learn 1.2.2)
+# have no wheels for Python >= 3.12 and were updated to the Python-3.12
+# compatible versions used to generate the artifacts in artifacts/.
+# See README.md ("Run the Streamlit application") for artifact provenance.
+pandas==2.3.1
+numpy==2.3.2
+scikit-learn==1.7.1
+joblib==1.5.1
+streamlit==1.54.0
+matplotlib==3.9.2
+seaborn==0.13.2
+# Testing
+pytest==8.4.2
+
