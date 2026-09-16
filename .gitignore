@@ -1,0 +1,17 @@
+# Model artifacts are generated locally (python train.py) and are version-sensitive.
+artifacts/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Streamlit secrets should never be committed.
+.streamlit/secrets.toml
+
+# Environment / IDE
+.env
+.vscode/
+.idea/
