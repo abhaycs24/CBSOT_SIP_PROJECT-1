@@ -18,3 +18,33 @@ This project builds an end-to-end data science workflow on the Telco subscriber 
 * Dynamic Elbow Method plotting for optimal cluster selection.
 * Behavior visualizations showing Customer Segments based on spend vs loyalty.
 * Detailed Classification Report alongside Confusion Matrix and ROC-AUC Curve analysis to measure precise predictive power.
+
+## Churn Risk Scoring
+
+The pipeline generates customer-level churn risk scores using the probability returned by the trained Random Forest model.
+
+Customers are assigned a risk level based on their predicted churn probability:
+
+| Churn Probability | Risk Level |
+|---|---|
+| >= 0.75 | High |
+| 0.50 - 0.74 | Medium |
+| < 0.50 | Low |
+
+The generated risk table contains:
+
+- Customer ID
+- Churn Probability
+- Risk Level
+
+Customers are sorted by churn probability in descending order to help identify high-risk customers.
+
+The pipeline also provides:
+
+- High-risk customer identification
+- A ranked customer risk list
+- Churn probability for each customer
+- Risk-level classification
+- Churn risk distribution visualization
+
+The implementation reuses the existing tuned Random Forest classifier and does not introduce a new prediction algorithm.
