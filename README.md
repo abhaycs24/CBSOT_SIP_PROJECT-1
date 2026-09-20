@@ -18,3 +18,48 @@ This project builds an end-to-end data science workflow on the Telco subscriber 
 * Dynamic Elbow Method plotting for optimal cluster selection.
 * Behavior visualizations showing Customer Segments based on spend vs loyalty.
 * Detailed Classification Report alongside Confusion Matrix and ROC-AUC Curve analysis to measure precise predictive power.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Python 3.8 or higher
+- pip
+
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/abhaycs24/CBSOT_SIP_PROJECT-1-.git
+cd CBSOT_SIP_PROJECT-1-
+
+# 2. (Optional) Create and activate a virtual environment
+python -m venv venv
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+```
+
+### Dataset
+
+This project uses the **IBM Telco Customer Churn** dataset.
+
+Download it from Kaggle:  
+🔗 [Telco Customer Churn — Kaggle](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
+
+After downloading, place `WA_Fn-UseC_-Telco-Customer-Churn.csv` in the project root directory.
+
+### Running the Notebook
+
+```bash
+# Launch Jupyter Notebook
+jupyter notebook CBSOT_SIP_PROJECT-1.ipynb
+```
+
+Or open and run it directly in [Google Colab](https://colab.research.google.com/) by uploading the `.ipynb` file.
