@@ -3,3 +3,6 @@ numpy==1.24.3
 scikit-learn==1.2.2
 matplotlib==3.7.1
 seaborn==0.12.2
+PyYAML==6.0.1
+imbalanced-learn==0.12.0
+pydantic==2.6.4
