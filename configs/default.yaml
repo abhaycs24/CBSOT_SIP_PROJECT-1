@@ -1,0 +1,26 @@
+data:
+  num_samples: 100
+  random_state: 42
+  missing_charges_count: 5
+  raw_data_path: null
+
+preprocessing:
+  target_column: "Churn Label"
+  id_column: "customerID"
+
+clustering:
+  n_clusters: 4
+  elbow_k_max: 6
+  random_state: 42
+
+modeling:
+  test_size: 0.2
+  random_state: 42
+  models_to_benchmark: ["rf", "xgboost", "lightgbm", "catboost"]
+  optuna:
+    n_trials: 15
+    timeout: 60
+    random_state: 42
+
+output:
+  artifacts_dir: "artifacts"
