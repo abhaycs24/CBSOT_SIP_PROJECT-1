@@ -1,0 +1,16 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment
+.env
+venv/
+env/
+
+# CatBoost telemetry
+catboost_info/
+
+# IDE
+.vscode/
+.idea/
