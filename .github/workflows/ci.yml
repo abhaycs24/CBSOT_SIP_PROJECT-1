@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  execute-notebook:
+    name: Execute notebook end-to-end
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # The repo has no requirements.txt yet; install the notebook's actual
+          # imports so it can run start-to-finish in CI.
+          pip install pandas numpy scikit-learn matplotlib seaborn jupyter nbconvert
+
+      - name: Execute notebook
+        run: |
+          # Runs every cell; the build fails if any cell raises. Output is written
+          # to a throwaway file so the committed notebook is left untouched.
+          jupyter nbconvert --to notebook --execute \
+            --ExecutePreprocessor.timeout=600 \
+            --output /tmp/executed.ipynb \
+            CBSOT_SIP_PROJECT-1.ipynb

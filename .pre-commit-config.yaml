@@ -1,0 +1,7 @@
+# Keeps notebook diffs reviewable by stripping output cells before commit.
+# Install once with:  pip install pre-commit nbstripout && pre-commit install
+repos:
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.7.1
+    hooks:
+      - id: nbstripout
