@@ -14,6 +14,12 @@ This project builds an end-to-end data science workflow on the Telco subscriber 
 * **Visualization**: Matplotlib, Seaborn
 * **Machine Learning**: Scikit-Learn (StandardScaler, KMeans, RandomForestClassifier, RandomizedSearchCV)
 
+## Dataset Setup
+1. Download the Telco Customer Churn dataset and place the CSV file in the project root directory.
+2. The notebook expects the dataset file to be named:
+3. `WA_Fn-UseC_-Telco-Customer-Churn.csv`
+4. The dataset is used for preprocessing, exploratory data analysis, customer segmentation, and churn prediction.
+
 ## Pipeline Deliverables
 * Dynamic Elbow Method plotting for optimal cluster selection.
 * Behavior visualizations showing Customer Segments based on spend vs loyalty.
